@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deslocador de Palavras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>🔤 Deslocador de Palavras</h1>
+            <p class="subtitle">Desloque as letras de uma palavra para a próxima letra do alfabeto</p>
+            
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="palavraInput" 
+                    placeholder="Digite a palavra desejada..." 
+                    autocomplete="off"
+                >
+                <button onclick="processar()" class="btn-processar">Processar</button>
+            </div>
+
+            <div id="resultados" class="resultados-container" style="display: none;">
+                <div class="resultado-box">
+                    <h2>Resultado</h2>
+                    <div class="palavra-original">
+                        <span class="label">Palavra Original:</span>
+                        <span id="palavraOriginal" class="valor"></span>
+                    </div>
+                    <div class="palavra-final">
+                        <span class="label">Palavra Final:</span>
+                        <span id="palavraFinal" class="valor"></span>
+                    </div>
+                </div>
+
+                <div class="etapas-box">
+                    <h3>📋 Etapas do Processamento</h3>
+                    <div id="etapasContainer" class="etapas-container"></div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3>ℹ️ Como funciona?</h3>
+                <ul>
+                    <li><strong>Letras maiúsculas (A-Z):</strong> São deslocadas para a próxima letra maiúscula (Z vira A)</li>
+                    <li><strong>Letras minúsculas (a-z):</strong> São deslocadas para a próxima letra minúscula (z vira a)</li>
+                    <li><strong>Números e símbolos:</strong> Permanecem inalterados</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
